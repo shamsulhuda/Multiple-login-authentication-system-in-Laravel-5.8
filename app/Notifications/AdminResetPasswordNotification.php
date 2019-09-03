@@ -45,7 +45,7 @@ class AdminResetPasswordNotification extends Notification
         return (new MailMessage)
                     ->line('You Are receiving this email because we received a password reset request for your account!')
                     ->action('Reset password', route('admin.password.reset', $this->token))
-                    ->line('If you did not request a password reset, No further action request is accepted!');
+                    ->line("If you didn't request for a password reset, No further action request is accepted!");
     }
 
     /**
